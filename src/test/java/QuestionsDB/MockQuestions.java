@@ -409,11 +409,8 @@ public class MockQuestions {
         add(" The \"commit\" command is used to save your changes to the local repository. \n" +
                 "Note that you have to explicitly tell Git which changes you want to include in a commit before running the \"git commit\" command. \n" +
                 " This means that a file won't be automatically included in the next commit just because it was changed. ");
-        add("Step 1: Open configuration page\n" +
-                "Step 2: check the box that says \"This project is parameterized\"\n" +
-                "Step 3: Click add parameter dropdown, and then select File Parameter\n" +
-                "Step 4: Enter the location you want the file to be uploaded, and click build with parameters.\n" +
-                "Step 5: Choose your file that you want to upload, and you're ready to run your build!");
+        add("You need to specify that the project is parameterized from the config page,\n" +
+                "then you select File Parameter from the params dropdown, next you enter the upload location, and choose what file to upload.");
         add(" GIT init command is used to create a new GIT repository, it can either be used to convert an existing, unversioned project\n" +
                 "to a Git repo, or it can initialize a new, empty repository. Since most other Git commands\n" +
                 "aren't available outside of an initialized repo, this is usually the first command that is run when creating a project.");
