@@ -154,7 +154,7 @@ public class MockQuestions {
         add(" Regression and retesting are really only similar in the fact that regression will be executed multiple times.\n" +
                 "Retesting is the act of testing something again after the dev has fixed it and sent it back to the tester.\n" +
                 "Regression testing is a big sweeping test that checks for any defects that may have popped up due to changes in the program.");
-        add(" Variables in Java are what we use to hold data. There are 8 types of variables that belong to Java, and aren't user defined.\n" +
+        add(" Variables in Java are what we use to hold data. There are 8 types of primitive variables that belong to Java, and aren't user defined.\n" +
                 "byte\n" +
                 "short\n" +
                 "int\n" +
@@ -162,6 +162,7 @@ public class MockQuestions {
                 "boolean\n" +
                 "double\n" +
                 "float\n" +
+                "char\n" +
                 "String");
         add(" There are 4 access modifiers in Java:\n" +
                 "private: sets the access to private so that it is not accessible outside of the class.\n" +
@@ -275,9 +276,9 @@ public class MockQuestions {
                 "    Site - this phase generates the project's java documentation.\n" +
                 "    Default - this phase handles the project's complete deployment.\n");
         add("44. ");
-        add("  The most common thing to validate is the status code in the response, but depending on the requirements\\n\" +\n" +
-                "                \"we can go a lot deeper, we can validate the response payload, like making sure the body is valid, and all field names, types, etc are correct.\\n\" +\n" +
-                "                \"We can validate response headers, verify the amount of time it took for the operation to complete, etc. \"");
+        add("  The most common thing to validate is the status code in the response, but depending on the requirements\n" +
+                "                we can go a lot deeper, we can validate the response payload, like making sure the body is valid, and all field names, types, etc are correct.\n" +
+                "                We can validate response headers, verify the amount of time it took for the operation to complete, etc.");
         add(" . POST creates new records, body is required\n" +
                 "GET  reads and retrieves data, body is not required. \n" +
                 "PUT updates/replaces existing data, body required.\n" +
@@ -441,7 +442,7 @@ public class MockQuestions {
                 "act.moveToElement(element).build().perform();");
         add(" There are a couple ways to scroll, you can either move to a specific element, or you can manually scroll using PAGE_UP or PAGE_DOWN\n" +
                 " Actions act = new Actions(driver)\n" +
-                "act.moveToElement(element);\n" +
+                "act.moveToElement(element).build().perform();\n" +
                 "act.sendKeys(Keys.PAGE_DOWN).build().perform();");
         add(" Hashtable and TreeMap both implements Map interface and looks similar, however, there is\n" +
                 "the following difference between HashMap and TreeMap.\n" +
