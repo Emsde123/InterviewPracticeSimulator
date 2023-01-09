@@ -409,13 +409,11 @@ public class MockQuestions {
         add(" The \"commit\" command is used to save your changes to the local repository. \n" +
                 "Note that you have to explicitly tell Git which changes you want to include in a commit before running the \"git commit\" command. \n" +
                 " This means that a file won't be automatically included in the next commit just because it was changed. ");
-        add(" Step 1: Click on the Configure button to open the configuration page.\n" +
-                "Step 2: In Maven Info Plugin Configuration click on the checkbox that reads “This project is parameterized”\n" +
-                "Step 3: Click on the Add Parameter drop-down to reveal all the available parameter options. Then click on File Parameter.\n" +
-                "Step 4: In the file location field, enter the location where you want your file to be uploaded to, then click save.\n" +
-                "Step 5: Click build with parameters, then click on choose file. \n" +
-                "Step 6: Select the file you want to upload. abc.xlsx for example.\n" +
-                "Step 7: Now you can run your build!");
+        add("Step 1: Open configuration page\n" +
+                "Step 2: check the box that says \"This project is parameterized\"\n" +
+                "Step 3: Click add parameter dropdown, and then select File Parameter\n" +
+                "Step 4: Enter the location you want the file to be uploaded, and click build with parameters.\n" +
+                "Step 5: Choose your file that you want to upload, and you're ready to run your build!");
         add(" GIT init command is used to create a new GIT repository, it can either be used to convert an existing, unversioned project\n" +
                 "to a Git repo, or it can initialize a new, empty repository. Since most other Git commands\n" +
                 "aren't available outside of an initialized repo, this is usually the first command that is run when creating a project.");
