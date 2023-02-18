@@ -14,7 +14,11 @@ public class QuizSimulator {
         MyMavenQuiz maven = new MyMavenQuiz();
 
         MockInterviewQuiz mock = new MockInterviewQuiz();
+
+        MyTroubleQuestionsQuiz trouble = new MyTroubleQuestionsQuiz();
         mock.start();
+
+
 
 
 

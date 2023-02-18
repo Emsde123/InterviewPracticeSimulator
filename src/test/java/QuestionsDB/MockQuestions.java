@@ -48,7 +48,7 @@ public class MockQuestions {
         add("41. What is the workflow? ");
         add("42. Bug life cycle? ");
         add("43. Maven cycle?");
-        add("44. What is central deposits? ");
+        add("44. How can you test a Webservice/API?");
         add("45. What do you need verify in API?");
         add("46. HTTP methods? ");
         add("47. Ad hoc testing?");
@@ -58,7 +58,7 @@ public class MockQuestions {
         add("51. How do you send data to service with a POST call?");
         add("52. What is the thread life cycle?");
         add("53. How to stop thread?");
-        add("54. JBDC?");
+        add("54. JDBC?");
         add("55. Which dependencies do you have in your pom.xml file?");
         add("56. How do you handle popups in Selenium?");
         add("57. How do you like Selenium version 3? Is Selenium 3 drastically different from Selenium 2");
@@ -66,7 +66,7 @@ public class MockQuestions {
         add("59. super interface in selenium");
         add("60. how to check boxes in Selenium");
         add("61. assert vs verify in selenium");
-        add("62. Maven cycle thread safe steps");
+        add("62. How do you automate your API test cases?");
         add("63. method overloading and overriding in selenium");
         add("64. How to connect excel sheet to java");
         add("65. Jira workflow ( colors?)");
@@ -85,7 +85,7 @@ public class MockQuestions {
         add("78. GIT init command ");
         add("79. API testing is ");
         add("80. API what needs to be verified ");
-        add("81. How do we send attachments to do test cases");
+        add("81. How do we send attachments to test cases");
         add("82. implicit wait vs explicit wait");
         add("83. write the syntax of explicit wait ");
         add("84. create an object of actions and use movetoelement method ");
@@ -144,17 +144,18 @@ public class MockQuestions {
                 "Properties file I keep credentials like service URI, Database URL, username, passwords. \n" +
                 "TestBase class, I read all this data and load the properties object, then other classes extends the TestBase class\n" +
                 "(which is accomplished using inheritance) and use all the data in the properties object.");
-        add("12. ");
+        add("I have had 3 jobs, and each of my jobs consisted of one project. In total I have worked on 3 projects. ");
         add(" For manual testing difficulties, the first thing that comes to mind is the higher chance of risk associated with it, \n" +
                 "It's harder to catch bugs when we don't have the tools to compare actual vs expected. \n" +
                 "For automation I think it's test scalability, there's a lot of variables that can change like browser type, resolution, \n" +
                 "OS, etc. Which can make things difficult while working on an expanding application. \n" +
                 "Synchronizing events can also become a challenge. ");
-        add("14. ");
+        add("I have been working as a tester for almost 6 years, there's no way for me to give you a concrete number, but it's definitely over 2500-3000.\n" +
+                "I create anywhere from 20-30 test cases per sprint, so that's 40-60 a month. Multiply that by 12 and it's ~600 test cases per year.");
         add(" Regression and retesting are really only similar in the fact that regression will be executed multiple times.\n" +
                 "Retesting is the act of testing something again after the dev has fixed it and sent it back to the tester.\n" +
                 "Regression testing is a big sweeping test that checks for any defects that may have popped up due to changes in the program.");
-        add(" Variables in Java are what we use to hold data. There are 8 types of primitive variables that belong to Java, and aren't user defined.\n" +
+        add(" Variables in Java are what we use to hold data. There are 8 primitive data types that belong to Java, and aren't user defined.\n" +
                 "byte\n" +
                 "short\n" +
                 "int\n" +
@@ -271,11 +272,20 @@ public class MockQuestions {
                 "Retest\n" +
                 "Reopen" +
                 "Closed");
-        add(" " +
-                "    Clean - During this phase, the project is cleaned (for a fresh build & deployment)\n" +
+        add(    "    Clean - During this phase, the project is cleaned (for a fresh build & deployment)\n" +
                 "    Site - this phase generates the project's java documentation.\n" +
                 "    Default - this phase handles the project's complete deployment.\n");
-        add("44. ");
+        add(" In order to test a webservice/api, I will need basic information about that service.\n" +
+                "I need to know URI, and depending on the requirements I will need headers, parameters, request schema.\n" +
+                "I get all of that information from my API documentation. If it's a new API and documentation is not ready, \n" +
+                "I will ask the dev to send me the details. \n" +
+                "Once I have the required details, I will first test the service manually with Postman, to make sure I get a response.\n" +
+                "After I get the response I will check the status code, if it's 200 I know that the service/API is up and running,\n" +
+                "then I will start to test the functionality of that service. To do this, I need to have an understanding of the requirement.\n" +
+                "For example: On a POST call some of the elements are optional. First thing I will do is test the optional elements, I remove one optional\n" +
+                "element at a time and check each one. After that I will test the required elements, I will leave a required element out and send my request.\n" +
+                "I should get an error code for each required element. Then I will validate the error codes. This is my negative scenario.\n" +
+                "I will test the headers in the same way, entering wrong information. After I'm done manually checking I can start writing my script. ");
         add("  The most common thing to validate is the status code in the response, but depending on the requirements\n" +
                 "                we can go a lot deeper, we can validate the response payload, like making sure the body is valid, and all field names, types, etc are correct.\n" +
                 "                We can validate response headers, verify the amount of time it took for the operation to complete, etc.");
@@ -350,7 +360,9 @@ public class MockQuestions {
         add(" For checkboxes all we need to do is make sure we're identifying a box with an input tag, and then we can do a normal click on them.");
         add(" Hard assertions will stop executing the test if one assertion is not met. Soft assertions, or verifications \n" +
                 "will not halt the execution if one is not met. ");
-        add("62.");
+        add("First, I will write my test case as a scenario in my cucumber feature file.\n" +
+                "Then I create step definition methods which are Java methods for each step in the feature file, and I write my code inside those methods.\n" +
+                "I add tags for each scenario, then use the tag in my runner class to run that scenario.");
         add(" We overload in Selenium by using Assert class.\n" +
                 "We override different Selenium methods to better fit with our framework, for example\n" +
                 "overriding the isDisplayed() method to return true if the title and the url are both displaying correctly.");
@@ -403,7 +415,7 @@ public class MockQuestions {
                 "    Deploy: It copies the packaged code to the remote repository for sharing it with other developers.");
         add(" A central repository is a singular storage location for all data within an organization.");
         add(" mvn-version command will return us the maven version currently installed.");
-        add("74. ");
+        add(" @ActiveProfiles(\"profileName\")");
         add(" Cucumber only supports two types of hooks, Before and After.\n" +
                 "@before hook gets executed before any other test scenarios, and @after gets executed after the scenario is executed. ");
         add(" The \"commit\" command is used to save your changes to the local repository. \n" +
@@ -411,7 +423,7 @@ public class MockQuestions {
                 " This means that a file won't be automatically included in the next commit just because it was changed. ");
         add("You need to specify that the project is parameterized from the config page,\n" +
                 "then you select File Parameter from the params dropdown, next you enter the upload location, and choose what file to upload.");
-        add(" GIT init command is used to create a new GIT repository, it can either be used to convert an existing, unversioned project\n" +
+        add(" GIT init command is used to create a new GIT repository, it can either be used to convert an existing, un-versioned project\n" +
                 "to a Git repo, or it can initialize a new, empty repository. Since most other Git commands\n" +
                 "aren't available outside of an initialized repo, this is usually the first command that is run when creating a project.");
         add(" API testing is essentially testing the layer of the application that the user can not see, it's testing all of our logic\n" +
@@ -419,7 +431,9 @@ public class MockQuestions {
         add(" The most common thing to verify is the response status code. But validatation can go as deep as is required.\n" +
                 "for example, we can validate content type, JSON schema, we can validate the body, \n" +
                 "we can validate the request headers, and request URL.  ");
-        add("81.");
+        add("We can attach attachments to our reports by using the Scenario class and it's embed method. Here's the syntax for attaching a file to your report:\n" +
+                "Scenario scenario = new Scenario();\n" +
+                "scenario.embed(response.asPrettyString().getBytes(),\"application/json\")");
         add(" Implicit wait is not specific to one element, it is not dynamic and we can't give it conditions, it is just \n" +
                 "telling Selenium to wait for a specified amount of time if an element is not showing up, and if the time runs out before\n" +
                 "it can locate the element, it will fail the step. Syntax:\n" +

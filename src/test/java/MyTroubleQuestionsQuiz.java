@@ -4,26 +4,25 @@ import QuestionsDB.TroubleQuestions;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MyTestNGandSeleniumQuiz implements MyQuiz {
-
+public class MyTroubleQuestionsQuiz implements MyQuiz{
     private ArrayList<String> wrongQuestions = new ArrayList<>();
     private ArrayList<Integer> arr = new ArrayList<>();
     private int totalAsked;
     private int correctAnswered;
     private int random;
 
-    MyTestNGandSeleniumQuiz(){
+  MyTroubleQuestionsQuiz(){
 
-    }
+  }
     @Override
     public int getRandomNumber() {
-        int max = TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.size() - 1;
+        int max = TroubleQuestions.troubleQuestions.size() - 1;
         int rand = (int) (Math.random() * (max));
         if(arr.contains(rand)){
 
             do{
                 rand = (int) (Math.random() * max);
-            }while(arr.contains(rand) && arr.size() != TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.size());
+            }while(arr.contains(rand) && arr.size() != TroubleQuestions.troubleQuestions.size());
 
         }
         random = rand;
@@ -33,7 +32,7 @@ public class MyTestNGandSeleniumQuiz implements MyQuiz {
 
     @Override
     public void generateQuestion() {
-        System.out.println(TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.get(getRandomNumber()));
+        System.out.println(TroubleQuestions.troubleQuestions.get(getRandomNumber()));
         ++totalAsked;
     }
 
@@ -51,7 +50,7 @@ public class MyTestNGandSeleniumQuiz implements MyQuiz {
 
     @Override
     public void start() {
-        System.out.println(ConsoleColors.ANSI_BLUE + "Welcome! TestNG Quiz is starting now.." + ConsoleColors.ANSI_RESET);
+        System.out.println(ConsoleColors.ANSI_BLUE + "Welcome! Your trouble questions quiz is starting now.." + ConsoleColors.ANSI_RESET);
         int count = 0;
         Scanner scan = new Scanner(System.in);
 
@@ -67,15 +66,15 @@ public class MyTestNGandSeleniumQuiz implements MyQuiz {
                 answeredCorrect();
             }else{
                 System.out.println(ConsoleColors.ANSI_RED + "Try better next time!" + ConsoleColors.ANSI_RESET);
-                wrongQuestions.add(TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.get(random));
+                wrongQuestions.add(TroubleQuestions.troubleQuestions.get(random));
 
             }
             System.out.println("Would you like another question? Press enter for yes, or N for no.");
             String anotherQuestion = scan.nextLine();
-            if(anotherQuestion.equalsIgnoreCase("n") || totalAsked == TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.size() - 1){
+            if(anotherQuestion.equalsIgnoreCase("n") || totalAsked == TroubleQuestions.troubleQuestions.size()){
                 break;
             }
-        }while(count < TestNGandSeleniumQuestions.TestNGandSeleniumQuestions.size());
+        }while(count < TroubleQuestions.troubleQuestions.size());
         long score = calculateScore();
         generateResult(score);
         System.out.println("Would you like to see the questions you missed? Y or N");
@@ -109,6 +108,6 @@ public class MyTestNGandSeleniumQuiz implements MyQuiz {
 
     @Override
     public void generateAnswer() {
-        System.out.println(TestNGandSeleniumQuestions.TestNGandSeleniumAnswers.get(random));
+        System.out.println(TroubleQuestions.troubleAnswers.get(random));
     }
 }
